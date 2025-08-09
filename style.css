@@ -5,8 +5,10 @@
   background-color: #ffffff;
 }
 
-.page-wrap {
-  max-width: 100%
+@media (max-width: 804px) {
+  .frame {
+    width: 100%;
+  }
 }
 
 .frame .overlap {
