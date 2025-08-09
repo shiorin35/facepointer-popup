@@ -320,3 +320,33 @@
   color: #5a2818;
   line-height: normal;
 }
+
+/* 画面全体の背景＆中央寄せ */
+body { margin: 0; }
+.shell {
+  min-height: 100svh;
+  display: grid;
+  place-items: start center;   /* 中央寄せ */
+  background: #f5f6f7;         /* PC時の左右余白色（好みで変更可） */
+}
+
+/* デザイン原寸（804x3296）を基準に、画面幅が狭いときだけ縮小してはめる */
+.stage {
+  /* 804px がデザイン幅。画面幅 / 804px がスケール。大きい時は1(=等倍)で打ち止め */
+  --scale: min(1, 100vw / 804px);
+
+  /* スケール後の見かけサイズ（＝キャンバスの実サイズ） */
+  width: calc(804px * var(--scale));
+  height: calc(3296px * var(--scale));
+
+  position: relative;
+}
+
+/* 中の固定レイアウト(.frame)をスケールしてはめ込む */
+.stage > .frame {
+  position: absolute;
+  inset: 0 auto auto 0;  /* 左上基準 */
+  transform-origin: top left;
+  transform: scale(var(--scale));
+}
+
