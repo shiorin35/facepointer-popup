@@ -11,7 +11,7 @@
   height: 1410px;
   top: 0;
   left: 0;
-  background-image: url(./img/background-image.png);
+  background-image: url(.image/background-image.png);
   background-size: cover;
   background-position: 50% 50%;
 }
