@@ -350,3 +350,47 @@
   transform: scale(var(--scale));
 }
 
+/* 基本：横スクロールを殺す */
+html, body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* キャンバスを中央に置く土台 */
+.shell {
+  min-height: 100svh;
+  display: grid;
+  place-items: start center;
+  background: #e8f5f7; /* 好みでOK。PCで左右に見える色 */
+}
+
+/* デザイン原寸：幅804px × 高さ3296px を基準にスケールする */
+.stage {
+  /* 端末の実表示幅(dvw)でスケール計算（未対応ブラウザは下の@supportsでフォールバック） */
+  --scale: min(1, 100dvw / 804px);
+
+  /* スケール後の“見かけサイズ” */
+  width: calc(804px * var(--scale));
+  height: calc(3296px * var(--scale));
+
+  position: relative;
+  overflow: hidden;         /* スケール誤差でのハミ出し防止 */
+  box-sizing: border-box;
+  margin: 0 auto;           /* 念のため中央寄せ */
+}
+
+/* 100dvwが使えない環境のフォールバック */
+@supports not (width: 100dvw) {
+  .stage { --scale: min(1, 100vw / 804px); }
+}
+
+/* 中身(.frame)を左上基準で縮小してはめ込む */
+.stage > .frame {
+  position: absolute;
+  inset: 0;
+  transform-origin: top left;
+  transform: scale(var(--scale));
+}
+
+
