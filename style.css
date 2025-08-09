@@ -9,6 +9,9 @@
   .page-wrap {
     width: 100%;
   }
+  .frame {
+    width: 100%;
+  }
 }
 
 .frame .overlap {
