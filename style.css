@@ -5,6 +5,10 @@
   background-color: #ffffff;
 }
 
+.page-wrap {
+  max-width: 100%
+}
+
 .frame .overlap {
   position: absolute;
   width: 804px;
