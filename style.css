@@ -329,3 +329,66 @@
   color: #5a2818;
   line-height: normal;
 }
+
+.frame {
+  position: relative;
+  width: 804px;
+  height: 3296px;
+  background-color: #ffffff;
+}
+
+/* スマホサイズ対応 */
+@media screen and (max-width: 430px) {
+  .page-wrap {
+    width: 100%;
+  }
+  .frame {
+    width: 100%;
+    height: auto; /* 高さは自動調整 */
+  }
+  .frame .overlap {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  .frame .overlap-group,
+  .frame .image-pointer,
+  .frame .group,
+  .frame .cv-table,
+  .frame .cv-botton,
+  .frame .div-wrapper,
+  .frame .event-area-png,
+  .frame .image-chat,
+  .frame .imgae-form,
+  .frame .image-reservation,
+  .frame .image-store,
+  .frame .cv-table-2 {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  /* テキスト類は横幅に合わせて縮小 */
+  .frame .text-wrapper,
+  .frame .top-message,
+  .frame .div,
+  .frame .text-wrapper-3,
+  .frame .text-wrapper-4,
+  .frame .text-wrapper-5,
+  .frame .text-wrapper-6,
+  .frame .text-wrapper-7,
+  .frame .LINE,
+  .frame .text-wrapper-8,
+  .frame .text-wrapper-9,
+  .frame .text-wrapper-10,
+  .frame .text-wrapper-11 {
+    font-size: calc(1rem + 1vw); /* 画面幅に応じて縮小 */
+    left: 5% !important;
+    right: 5% !important;
+  }
+  /* 画像は親要素に合わせる */
+  img, .frame img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
