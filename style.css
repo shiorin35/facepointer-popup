@@ -1,7 +1,7 @@
 .frame {
   position: relative;
-  width: 804px;
-  height: 3296px;
+  width: 430px;
+  height: 1681px;
   background-color: #ffffff;
 }
 
@@ -16,7 +16,7 @@
 
 .frame .overlap {
   position: absolute;
-  width: 804px;
+  width: 430px;
   height: 1410px;
   top: 0;
   left: 0;
