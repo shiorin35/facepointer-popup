@@ -6,22 +6,18 @@
 }
 
 @media screen and (max-width: 430px) {
-  .frame .page-wrap .overlap {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  background-image: url(image/background-image.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
+  .page-wrap {
+    width: 100%;
+  }
+  .frame {
+    width: 100%;
+  }
 }
 
-.frame .page-wrap .overlap {
+.frame .overlap {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: 804px;
+  height: 1410px;
   top: 0;
   left: 0;
   background-image: url(image/background-image.png);
@@ -332,24 +328,4 @@
   font-weight: 400;
   color: #5a2818;
   line-height: normal;
-}
-
-.frame {
-  position: relative;
-  width: 804px;
-  height: 3296px;
-  background-color: #ffffff;
-}
-
-@media screen and (max-width: 430px) {
-  .frame .page-wrap .overlap {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  background-image: url(image/background-image.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
 }
