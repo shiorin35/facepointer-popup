@@ -1,22 +1,19 @@
 .frame {
   position: relative;
-  width: 430px;
-  height: 1681px;
+  width: 804px;
+  height: 3296px;
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 430px) {
+@media (max-width: 430px) {
   .page-wrap {
-    width: 100%;
-  }
-  .frame {
     width: 100%;
   }
 }
 
 .frame .overlap {
   position: absolute;
-  width: 430px;
+  width: 804px;
   height: 1410px;
   top: 0;
   left: 0;
