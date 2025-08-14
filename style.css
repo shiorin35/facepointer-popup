@@ -16,8 +16,8 @@
 
 .frame .overlap {
   position: absolute;
-  width: 804px;
-  height: 1410px;
+  width: 100%;
+  height: auto;
   top: 0;
   left: 0;
   background-image: url(image/background-image.png);
