@@ -1,53 +1,23 @@
-.frame {
+.frame.div {
   position: relative;
-  width: 804px;
-  height: 3296px;
+  width: 402px;
+  height: 1648px;
   background-color: #ffffff;
+  aspect-ratio: 0.24;
 }
 
-/* =========================================
-   スマホ最適化（はみ出しゼロ＆全体縮小）
-   目標幅: 360px（スマホの100%）
-   ========================================= */
-
-@media (max-width: 430px) {
-  /* 目標幅・元サイズをCSS変数化してスケール算出 */
-  .page-wrap {
-    --base-w: 804;         /* 元のデザイン幅(px) */
-    --base-h: 3296;        /* 元のデザイン高さ(px) */
-    --target-w: 360;       /* スマホ時の見かけ幅(px) */
-    --scale: calc(var(--target-w) / var(--base-w));
-
-    width: min(100vw, 360px);
-    max-width: 360px;
-    margin: 0 auto;
-    position: relative;
-
-    /* スケール後の見かけ高さを確保（重要） */
-    height: calc(var(--base-h) * var(--scale));
-    overflow: hidden; /* 念のためはみ出し防止 */
-  }
-
-  /* フレーム全体を縮小。元の左上を基準に等倍縮小させる */
-  .frame {
-    /* 既存の width:804px / height:3296px は維持（scale対象） */
-    transform: scale(var(--scale));
-    transform-origin: top left;
-  }
-
-  /* 必要なら背景のにじみ軽減（任意） */
-  .frame .overlap {
-    image-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@media (max-width: 768px) {
+  .frame.div {
+    width: 100vw;
+    max-width: 100%;
+    aspect-ratio: unset;
   }
 }
-
 
 .frame .overlap {
   position: absolute;
-  width: 804px;
-  height: 1410px;
+  width: 402px;
+  height: 705px;
   top: 0;
   left: 0;
   background-image: url(image/background-image.png);
@@ -55,13 +25,19 @@
   background-position: 50% 50%;
 }
 
+@media (max-width: 768px) {
+  .frame .overlap {
+    width: 100%;
+  }
+}
+
 .frame .text-wrapper {
-  top: 171px;
-  left: 225px;
-  font-family: "Fira Code-Regular", Helvetica;
+  top: 86px;
+  left: 112px;
+  font-family: "Fira Code", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 18px;
   letter-spacing: 0;
   position: absolute;
   line-height: normal;
@@ -69,136 +45,134 @@
 
 .frame .top-message {
   position: absolute;
-  top: 258px;
-  left: 58px;
-  font-family: "Noto Serif JP-Medium", Helvetica;
+  top: 129px;
+  left: 29px;
+  font-family: "Noto Serif JP", Helvetica;
   font-weight: 500;
   color: #ffffff;
-  font-size: 72px;
+  font-size: 36px;
   text-align: center;
-  letter-spacing: 5.76px;
+  letter-spacing: 2.88px;
   line-height: normal;
 }
 
 .frame .overlap-group {
   position: absolute;
-  width: 750px;
-  height: 617px;
-  top: 444px;
-  left: 54px;
+  width: 375px;
+  height: 310px;
+  top: 222px;
+  left: 27px;
 }
 
 .frame .image-pointer {
   position: absolute;
-  width: 732px;
-  height: 376px;
+  width: 366px;
+  height: 188px;
   top: 0;
-  left: 18px;
+  left: 9px;
   aspect-ratio: 1.96;
 }
 
 .frame .group {
   position: absolute;
-  width: 564px;
-  height: 257px;
-  top: 360px;
+  width: 284px;
+  height: 130px;
+  top: 180px;
   left: 0;
 }
 
-.frame .div {
-  top: 56px;
-  left: 23px;
-  font-family: "Noto Sans JP-Light", Helvetica;
+.frame .p {
+  top: 28px;
+  left: 12px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 300;
   color: #ffffff;
-  font-size: 36px;
-  letter-spacing: 2.88px;
+  font-size: 18px;
+  letter-spacing: 1.44px;
   position: absolute;
   line-height: normal;
 }
 
 .frame .span {
-  letter-spacing: 1.04px;
+  letter-spacing: 0.26px;
 }
 
 .frame .text-wrapper-2 {
-  font-size: 24px;
-  letter-spacing: 0.46px;
+  font-size: 12px;
+  letter-spacing: 0.12px;
 }
 
 .frame .text-wrapper-3 {
   top: 0;
   left: 0;
-  text-shadow: 0px 4px 4px #0000007a;
-  font-family: "Noto Sans JP-DemiLight", Helvetica;
+  text-shadow: 0px 2px 2px #0000007a;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 300;
   color: #ffffff;
-  font-size: 36px;
+  font-size: 18px;
   text-align: center;
-  letter-spacing: 2.88px;
-  white-space: nowrap;
+  letter-spacing: 1.44px;
   position: absolute;
   line-height: normal;
 }
 
 .frame .cv-table {
-  height: 194px;
-  top: 1154px;
-  left: 72px;
+  height: 98px;
+  top: 577px;
+  left: 36px;
   position: absolute;
-  width: 661px;
+  width: 332px;
 }
 
 .frame .cv-botton {
-  height: 139px;
+  height: 70px;
   top: 0;
   left: 0;
   position: absolute;
-  width: 661px;
+  width: 332px;
 }
 
 .frame .div-wrapper {
   position: relative;
-  width: 659px;
-  height: 139px;
+  width: 330px;
+  height: 70px;
   background-color: #5ca4a9;
-  border-radius: 80px;
+  border-radius: 40px;
 }
 
 .frame .text-wrapper-4 {
   position: absolute;
-  top: 45px;
-  left: 121px;
-  font-family: "Noto Sans JP-Bold", Helvetica;
+  top: 22px;
+  left: 60px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 40px;
-  letter-spacing: 2.00px;
+  font-size: 20px;
+  letter-spacing: 1.00px;
   line-height: normal;
   white-space: nowrap;
 }
 
 .frame .text-wrapper-5 {
   position: absolute;
-  top: 163px;
-  left: 13px;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  top: 82px;
+  left: 6px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 26px;
-  letter-spacing: 1.30px;
+  font-size: 13px;
+  letter-spacing: 0.65px;
   line-height: normal;
-  white-space: nowrap;
 }
 
 .frame .text-wrapper-6 {
-  top: 1555px;
-  left: 166px;
-  font-family: "Noto Sans JP-Medium", Helvetica;
+  top: 778px;
+  left: 83px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 500;
   color: #5a2818;
-  font-size: 40px;
-  letter-spacing: 3.20px;
+  font-size: 20px;
+  letter-spacing: 1.60px;
   white-space: nowrap;
   position: absolute;
   line-height: normal;
@@ -206,23 +180,23 @@
 
 .frame .event-area-png {
   position: absolute;
-  width: 622px;
-  height: 622px;
-  top: 1697px;
-  left: 91px;
+  width: 311px;
+  height: 311px;
+  top: 848px;
+  left: 46px;
   aspect-ratio: 1;
   object-fit: cover;
 }
 
 .frame .text-wrapper-7 {
-  top: 2457px;
-  left: 252px;
-  font-family: "Noto Sans JP-Medium", Helvetica;
+  top: 1228px;
+  left: 126px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 500;
   color: #5a2818;
-  font-size: 40px;
+  font-size: 20px;
   text-align: center;
-  letter-spacing: 3.20px;
+  letter-spacing: 1.60px;
   white-space: nowrap;
   position: absolute;
   line-height: normal;
@@ -230,20 +204,20 @@
 
 .frame .image-chat {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  top: 2552px;
-  left: 89px;
+  width: 64px;
+  height: 64px;
+  top: 1276px;
+  left: 44px;
 }
 
 .frame .LINE {
-  top: 2698px;
-  left: 97px;
-  font-size: 22px;
+  top: 1349px;
+  left: 48px;
+  font-size: 11px;
   text-align: center;
-  letter-spacing: 0.22px;
+  letter-spacing: 0.11px;
   position: absolute;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #5a2818;
   line-height: normal;
@@ -251,111 +225,128 @@
 
 .frame .image-arrow {
   position: absolute;
-  width: 16px;
-  height: 25px;
-  top: 2712px;
-  left: 223px;
+  width: 8px;
+  height: 13px;
+  top: 1356px;
+  left: 112px;
 }
 
 .frame .imgae-form {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  top: 2552px;
-  left: 255px;
+  width: 64px;
+  height: 64px;
+  top: 1276px;
+  left: 128px;
 }
 
 .frame .text-wrapper-8 {
-  height: 52px;
-  top: 2694px;
-  left: 265px;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  height: 26px;
+  top: 1347px;
+  left: 132px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #5a2818;
-  font-size: 22px;
+  font-size: 11px;
   text-align: center;
-  letter-spacing: 0.22px;
+  letter-spacing: 0.11px;
   position: absolute;
   line-height: normal;
 }
 
 .frame .arrow {
   position: absolute;
-  width: 16px;
-  height: 25px;
-  top: 2712px;
-  left: 393px;
+  width: 8px;
+  height: 13px;
+  top: 1356px;
+  left: 196px;
 }
 
 .frame .image-reservation {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  top: 2552px;
-  left: 421px;
+  width: 64px;
+  height: 64px;
+  top: 1276px;
+  left: 210px;
 }
 
 .frame .text-wrapper-9 {
-  height: 52px;
-  top: 2695px;
-  left: 418px;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  height: 26px;
+  top: 1348px;
+  left: 209px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #5a2818;
-  font-size: 22px;
+  font-size: 11px;
   text-align: center;
-  letter-spacing: 0.22px;
+  letter-spacing: 0.11px;
   position: absolute;
   line-height: normal;
 }
 
 .frame .img {
   position: absolute;
-  width: 16px;
-  height: 25px;
-  top: 2712px;
-  left: 563px;
+  width: 8px;
+  height: 13px;
+  top: 1356px;
+  left: 282px;
 }
 
 .frame .image-store {
   position: absolute;
-  width: 128px;
-  height: 128px;
-  top: 2552px;
-  left: 587px;
+  width: 64px;
+  height: 64px;
+  top: 1276px;
+  left: 294px;
 }
 
 .frame .text-wrapper-10 {
-  height: 52px;
-  top: 2694px;
-  left: 595px;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  height: 26px;
+  top: 1347px;
+  left: 298px;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #5a2818;
-  font-size: 22px;
+  font-size: 11px;
   text-align: center;
-  letter-spacing: 0.22px;
+  letter-spacing: 0.11px;
   position: absolute;
   line-height: normal;
 }
 
 .frame .cv-table-2 {
   position: absolute;
-  width: 661px;
-  height: 194px;
-  top: 2858px;
-  left: 72px;
+  width: 332px;
+  height: 98px;
+  top: 1429px;
+  left: 36px;
 }
 
 .frame .text-wrapper-11 {
-  top: 163px;
-  left: 13px;
-  font-size: 26px;
-  letter-spacing: 1.30px;
-  white-space: nowrap;
+  top: 82px;
+  left: 6px;
+  font-size: 13px;
+  letter-spacing: 0.65px;
   position: absolute;
-  font-family: "Noto Sans JP-Regular", Helvetica;
+  font-family: "Noto Sans JP", Helvetica;
   font-weight: 400;
   color: #5a2818;
   line-height: normal;
+}
+
+.frame.div-2 {
+  width: 1920px;
+  height: 1648px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1919px) {
+  .frame.div-2 {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .frame.div {
+    display: none !important;
+  }
 }
