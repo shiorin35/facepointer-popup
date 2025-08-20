@@ -3,80 +3,131 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/style/globals.css" />
   </head>
   
   <body>
-      <div class="page-wrap">
-          <div class="frame">
-            
-            <div class="overlap">
-              <div class="text-wrapper">\ 全国で開催予定 /</div>
-              <div class="top-message">フェイスポインター<br />無料体験会</div>
-              <div class="overlap-group">
-                <img class="image-pointer" src="image/image-pointer.png" />
-                <div class="group">
-                  <div class="text-wrapper-3">「実際に試してから考えたい」</div>
-                  <p class="div">
-                    <span class="span">そんなあなたに。<br /></span>
-                    <span class="text-wrapper-2">　&nbsp;&nbsp;<br /></span>
-                    <span class="span">オンライン限定販売の<br />美容アイテムを、<br />無料で体験していただけます。</span>
-                  </p>
-                </div>
-              </div>
-              <div class="cv-table">
-                <div class="cv-botton">
-                  <a href="https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" class="cv-link">
-                    <div class="div-wrapper">
-                      <div class="text-wrapper-4">無料体験の詳細をみる</div>
-                    </div>
-                  </a>
-                </div>
-                <div class="text-wrapper-5">LINE登録で会場情報・予約フォームをお送りします</div>
-              </div>
-            </div>
-            
-            <div class="text-wrapper-6">全国で順次開催予定です</div>
-              <img class="event-area-png" src="image/event-area.png" />
-            
-            <div class="text-wrapper-7">
-              参加までの流れ
-            </div>
-              <img class="image-chat" src="image/chat.png" />
-            <div class="LINE">
-              LINEで<br />お友達登録
-            </div>
-              <img class="image-arrow" src="image/arrow.png" />
-              <img class="imgae-form" src="image/form.png" />
-            <div class="text-wrapper-8">
-              フォームで<br />場所を選択
-            </div>
-              <img class="arrow" src="image/arrow.png" />
-              <img class="image-reservation" src="image/reservation.png" />
-            <div class="text-wrapper-9">
-              参加申し込み<br />完了
-            </div>
-              <img class="img" src="image/arrow.png" />
-              <img class="image-store" src="image/store.png" />
-            <div class="text-wrapper-10">
-              開催場所を<br />お知らせ
-            </div>
-            
-            <div class="cv-table-2">
-              <div class="cv-botton">
-                <a href="https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" class="cv-link">
-                  <div class="div-wrapper">
-                    <div class="text-wrapper-4">
-                      無料体験の詳細をみる</div>
-                  </div>
-                </a>
-              </div>
-              <div class="text-wrapper-11">LINE登録で会場情報・予約フォームをお送りします</div>
-            </div>
-            
+    <div class="flex flex-col max-w-none md:max-w-md mx-auto pb-8 space-y-16">
+      <section class="relative md:h-md h-screen w-full ">
+        <!-- background image -->
+        <div class="h-screen md:h-md absolute inset-0 -z-10 bg-image" />
+        <!-- // background image -->
+        <div class="h-screen md:h-md py-4 grid grid-rows-4 gap-4  text-white">
+          <div class="row-span-1 px-8 flex flex-col items-center justify-center gap-4">
+            <p>\ 全国で開催予定 /</p>
+            <h1 class="text-center text-3xl font-serif">フェイスポインター<br />無料体験会</h1>
           </div>
-       </div>
-    
+          <div class="row-span-1">
+            <img
+              src="public/image/image-pointer.png"
+              alt="フェイスポインター"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div class="px-8 row-span-5 w-full flex flex-col justify-end gap-4">
+            <div>
+              <p class="text-shadow-sm">「実際に試してから考えたい」</p>
+              <p>そんなあなたに。</p>
+            </div>
+            <div>
+              <p>オンライン限定販売の</p>
+              <p>美容アイテムを、</p>
+              <p>無料で体験していただけます。</p>
+            </div>
+            <a href=" https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" target="_blank" rel="noopener noreferrer">
+              <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest bg-green rounded-full w-full text-white hover:bg-green transition-colors duration-300">無料体験の詳細をみる</button>
+            </a>
+            <p class="text-sm text-slate-200 text-center">LINE登録で会場情報・予約フォームをお送りします</p>
+          </div>
+        </div>
+      </section>
+      <section class="px-8 flex flex-col gap-8">
+        <div class="w-full text-center">
+          <p class="font-bold text-xl text-brown">全国で順次開催予定です</p>
+        </div>
+        <img
+          src="public/image/event-area.png"
+          alt="開催エリア"
+          class="size-full"
+        />
+      </section>
+      <section class="px-8 flex flex-col gap-8 text-brown">
+        <div class="w-full text-center">
+          <p class="font-bold text-xl">参加までの流れ</p>
+        </div>
+        <div class="w-full grid grid-cols-23">
+          <div class="col-span-5 p-2">
+            <img
+              src="public/image/chat.png"
+              alt="ステップ1"
+              class="size-full"
+            />
+          </div>
+          <div class="col-span-1"></div>
+          <div class="col-span-5 p-2">
+            <img
+              src="public/image/form.png"
+              alt="ステップ1"
+              class="size-full"
+            />
+          </div>
+          <div class="col-span-1"></div>
+          <div class="col-span-5 p-2">
+            <img
+              src="public/image/reservation.png"
+              alt="ステップ1"
+              class="size-full"
+            />
+          </div>
+          <div class="col-span-1"></div>
+          <div class="col-span-5 p-2">
+            <img
+              src="public/image/store.png"
+              alt="ステップ1"
+              class="size-full"
+            />
+          </div>
+          <div class="col-span-5">
+            <p class="text-center text-xs">LINEで<br />お友達登録</p>
+          </div>
+          <div class="col-span-1 flex items-center justify-center">
+            <img
+              src="public/image/arrow.png"
+              alt="ステップ1"
+              class="w-3"
+            />
+          </div>
+          <div class="col-span-5">
+            <p class="text-center text-xs">フォームで<br />場所を選択</p>
+          </div>
+          <div class="col-span-1 flex items-center justify-center">
+            <img
+              src="public/image/arrow.png"
+              alt="ステップ1"
+              class="w-3"
+            />
+          </div>
+          <div class="col-span-5">
+            <p class="text-center text-xs">参加申し込み<br />完了</p>
+          </div>
+          <div class="col-span-1 flex items-center justify-center">
+            <img
+              src="public/image/arrow.png"
+              alt="ステップ1"
+              class="w-3"
+            />
+          </div>
+          <div class="col-span-5">
+            <p class="text-center text-xs">開催場所を<br />お知らせ</p>
+          </div>
+        </div>
+      </section>
+      <section class="px-8 flex flex-col gap-4 text-brown">
+        <a href="https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" target="_blank" rel="noopener noreferrer">
+          <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest text-white bg-green rounded-full w-full hover:bg-green transition-colors duration-300">無料体験の詳細をみる</button>
+        </a>
+        <p class="text-sm text-center">LINE登録で会場情報・予約フォームをお送りします</p>
+      </section>
+    </div>
   </body>
 </html>
