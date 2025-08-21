@@ -7,8 +7,15 @@
   </head>
   
   <body>
-    <div class="flex flex-col max-w-none md:max-w-md mx-auto pb-8 space-y-16">
-      <section class="md:h-md h-screen w-full bg-image">
+    <main class="flex flex-col max-w-none md:max-w-md mx-auto pb-8 space-y-16">
+      <section class="relative md:h-md h-screen w-full z-0 overflow-hidden">
+        <div class="absolute inset-0 md:h-md h-screen w-full -z-10">
+          <img
+            src="public/image/background-image.png"
+            alt="背景画像"
+            class="object-cover w-full"
+          />
+        </div>
         <div class="h-screen md:h-md py-4 grid grid-rows-4 gap-4 text-white">
           <div class="row-span-1 px-8 flex flex-col items-center justify-center gap-4">
             <p>\ 全国で開催予定 /</p>
@@ -32,7 +39,7 @@
               <p>無料で体験していただけます。</p>
             </div>
             <a href=" https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" target="_blank" rel="noopener noreferrer">
-              <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest bg-green rounded-full w-full text-white hover:bg-green transition-colors duration-300">無料体験の詳細をみる</button>
+              <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest bg-green rounded-full w-full text-white hover:bg-green transition-colors duration-300 cursor-pointer">無料体験の詳細をみる</button>
             </a>
             <p class="text-sm text-slate-200 text-center">LINE登録で会場情報・予約フォームをお送りします</p>
           </div>
@@ -121,10 +128,10 @@
       </section>
       <section class="px-8 flex flex-col gap-4 text-brown">
         <a href="https://liff.line.me/1655117251-Bz5ZJyPm/landing?follow=%40grj3586v&lp=I5fofF&liff_id=1655117251-Bz5ZJyPm" target="_blank" rel="noopener noreferrer">
-          <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest text-white bg-green rounded-full w-full hover:bg-green transition-colors duration-300">無料体験の詳細をみる</button>
+          <button class="px-4 py-6 font-bold border-none text-2xl tracking-widest text-white bg-green rounded-full w-full hover:bg-green transition-colors duration-300 cursor-pointer">無料体験の詳細をみる</button>
         </a>
         <p class="text-sm text-center">LINE登録で会場情報・予約フォームをお送りします</p>
       </section>
-    </div>
+    </main>
   </body>
 </html>
