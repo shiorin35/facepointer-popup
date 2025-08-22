@@ -9,6 +9,7 @@ body {
   padding: 0px;
   width: 100%;
   height: 100%;
+  font-family: 'Noto Sans JP', 'Noto Sans JP';
 }
 
 /* Tailwind-like individual utility classes (use Tailwind-like names) */
@@ -78,7 +79,7 @@ body {
 .text-2xl { font-size: 1.5rem; line-height: 2rem; }
 .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
 .text-shadow-md { text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
-.font-serif { font-family: 'serif'; }
+.font-noto-serif-jp { font-family: 'Noto Serif JP'; }
 .font-bold { font-weight: bold; }
 .tracking-widest { letter-spacing: 0.1em; }
 
