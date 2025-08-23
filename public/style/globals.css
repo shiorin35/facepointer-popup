@@ -56,7 +56,7 @@ body {
 .pb-8 { padding-bottom: 2rem; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
 .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; margin-top:4rem; }
 
 
 .bg-green { background-color: #5ca4a9; }
@@ -77,8 +77,8 @@ body {
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
 .text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.text-3xl { font-size: 40px; line-height: 1.4px; }
-.text-shadow-md { text-shadow: 0 2.14px 2.14px rgba(0, 0, 0, 0.48); }
+.text-3xl { font-size: 32px; line-height: 42px; }
+.text-shadow-sm { text-shadow: 0 2.14px 2.14px rgba(0, 0, 0, 0.48); }
 .font-noto-serif-jp { font-family: 'Noto Serif JP'; }
 .font-bold { font-weight: bold; }
 .tracking-widest { letter-spacing: 0.1em; }
