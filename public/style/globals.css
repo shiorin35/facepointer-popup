@@ -83,6 +83,8 @@ body {
 .font-bold { font-weight: bold; }
 .tracking-widest { letter-spacing: 0.1em; }
 
+.top-space { padding-top: 8px; }
+
 .border-none { border: none; }
 .rounded-full { border-radius: 9999px; }
 
